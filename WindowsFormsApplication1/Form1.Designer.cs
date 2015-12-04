@@ -44,10 +44,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
+            this.listBox8 = new System.Windows.Forms.ListBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listBox1
@@ -141,7 +140,7 @@
             this.listBox6.FormattingEnabled = true;
             this.listBox6.Location = new System.Drawing.Point(12, 101);
             this.listBox6.Name = "listBox6";
-            this.listBox6.Size = new System.Drawing.Size(56, 225);
+            this.listBox6.Size = new System.Drawing.Size(56, 446);
             this.listBox6.TabIndex = 10;
             // 
             // listBox7
@@ -149,7 +148,7 @@
             this.listBox7.FormattingEnabled = true;
             this.listBox7.Location = new System.Drawing.Point(86, 101);
             this.listBox7.Name = "listBox7";
-            this.listBox7.Size = new System.Drawing.Size(54, 225);
+            this.listBox7.Size = new System.Drawing.Size(54, 446);
             this.listBox7.TabIndex = 11;
             // 
             // label6
@@ -188,14 +187,6 @@
             this.label9.TabIndex = 15;
             this.label9.Text = "N=20";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 345);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(56, 206);
-            this.textBox1.TabIndex = 16;
-            // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(229, 557);
@@ -206,34 +197,31 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button1
+            // listBox8
             // 
-            this.button1.Location = new System.Drawing.Point(12, 557);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 23);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Добавить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.listBox8.FormattingEnabled = true;
+            this.listBox8.Location = new System.Drawing.Point(603, 53);
+            this.listBox8.Name = "listBox8";
+            this.listBox8.Size = new System.Drawing.Size(140, 498);
+            this.listBox8.TabIndex = 24;
             // 
-            // label10
+            // label11
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(97, 451);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "label10";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(600, 37);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(58, 13);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "OBRATKA";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(649, 592);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(841, 592);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.listBox8);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -276,10 +264,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ListBox listBox8;
+        private System.Windows.Forms.Label label11;
 
     }
 }

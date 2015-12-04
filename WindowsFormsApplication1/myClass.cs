@@ -13,7 +13,7 @@ namespace WindowsFormsApplication1
         public double[] InnerArray_T = new double[N];   //входные значения времени
         
         public Complex[] Furie = new Complex[N];
-
+        public List<Complex> output = new List<Complex>();
         public int Nn
         {
             get { return N; }
@@ -28,34 +28,43 @@ namespace WindowsFormsApplication1
             double temp;
             double[] temp2 = new double[20]; 
             double[] f = new double[6];
-           
 
-                for (int k = 0; k < N-1; k++)
+                for (int k = 0; k < N; k++)
                 {
                     Furie[k] = new Complex();
+                    Complex t = new Complex();
    
-                    for (int n = 0; n < N-1; n++)
+                    for (int n = 0; n < N; n++)
                     {
                         Arg = 2 * Math.PI * k * n / N; //+
 
                         Furie[k].Re += Inner_A[n] * Math.Cos(Arg);
                         Furie[k].Im -= Inner_A[n] * Math.Sin(Arg);
+
+                        t.Re += Inner_A[n] * Math.Cos(Arg);
+                        t.Im -= Inner_A[n] * Math.Sin(Arg);
                     }
 
                     Furie[k].Amplitude = (Math.Sqrt(Math.Pow(Furie[k].Re, 2) + Math.Pow(Furie[k].Im, 2))) / N;
                     Furie[k].Faza = Math.Atan(Furie[k].Im / Furie[k].Re) / Math.PI * 180;
 
-                    Furie[k].Frecuensy = ((N - 1) * (k));
+                    Furie[k].Freq = ((N - 1) * (k));
 
+                    t.Amplitude = (Math.Sqrt(Math.Pow(t.Re, 2) + Math.Pow(t.Im, 2)));
+                    t.Faza = Math.Atan2(t.Im, t.Re) / Math.PI * 180;
+                    t.Freq = (N - 1) * k;
+
+                    output.Add(t);
                 }
         }
     }
-    public class Complex
+   public class Complex
     {
         public double Re;// Реальная часть
         public double Im; // Мнимая
         public double Amplitude; // Амплитуда для АЧХ
         public double Faza; // Фаза для ФЧХ
-        public double Frecuensy; // Частота гармоники
+        public double Freq; // Частота гармоники
     }
+    
 }
